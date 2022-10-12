@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Jerry Jeong's portfolio website
+
+Hello! This is the repository for my personal portfolio website! It is meant to be visible to people who are interested in how the website is built, and what I can do to produce a website using my skills.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts for the project
 
 In the project directory, you can run:
 
