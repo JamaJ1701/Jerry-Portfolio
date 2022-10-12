@@ -13,8 +13,6 @@ code {
     monospace;
 }
 
-.main-nav{
+header{
   background-color: #424242;
-  /* color: white; */
-  height: 64px;
 }

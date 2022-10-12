@@ -6,6 +6,7 @@ import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
+import { Box, Stack } from '@mui/material';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,8 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
-      <Header />
-      <App />
+      <Stack>
+        <Header />
+        <App />
+      </Stack>
+
     </ThemeProvider>
 
   </React.StrictMode>

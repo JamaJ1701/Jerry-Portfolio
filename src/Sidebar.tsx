@@ -2,6 +2,7 @@ import { Drawer, Divider, Box, List, ListItem, ListItemButton, ListItemIcon, Lis
 import Button from '@mui/material/Button'
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles'
+// import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Sidebar() {
     const theme = useTheme();
