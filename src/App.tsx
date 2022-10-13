@@ -11,7 +11,6 @@ function App(props: Props) {
       component="main"
       sx={{
         flexGrow: 1,
-        p: 3,
         width: { md: 'calc(100% - 250px)' },
         ml: { md: 'calc(250px)' }
       }}
