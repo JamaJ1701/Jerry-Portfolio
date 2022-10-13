@@ -6,16 +6,34 @@ import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
-import { Stack, Box } from '@mui/material';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+
+import Landing from './Landing';
+import Projects from './Projects';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing />
+  },
+  {
+    path: "/projects",
+    element: <Projects/>
+  }
+])
+
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
       <Header />
-      <App />
+      
+      <App>
+        <RouterProvider router={router}/>
+      </App>
     </ThemeProvider>
   </React.StrictMode>
 );
