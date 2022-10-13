@@ -13,7 +13,7 @@ export default function Sidebar(props:any) {
     // This is the content of sidebar menu, including the functionality. 
     return (
         <Box
-            sx={{ width: 300 }}
+            sx={{ width: 250 }}
             role="presentation"
         >
             {/* If desktop, display the logo as well */}
