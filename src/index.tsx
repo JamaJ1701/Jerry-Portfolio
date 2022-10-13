@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -36,7 +36,8 @@ const router = createBrowserRouter([
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
-        <RouterProvider router={router} />
+      <CssBaseline />
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
