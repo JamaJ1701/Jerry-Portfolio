@@ -1,15 +1,12 @@
-import { Drawer, Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
-import Button from '@mui/material/Button'
-import { useState } from "react";
-import { useTheme } from '@mui/material/styles'
-import MenuIcon from '@mui/icons-material/Menu';
+import { Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
 // import Typography from "@mui/material/Typography";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Container } from "@mui/material"
+import { Link } from "react-router-dom";
 
-export default function Sidebar(props:any) {
-    
+export default function Sidebar(props: any) {
+
     // This is the content of sidebar menu, including the functionality. 
     return (
         <Box
@@ -17,24 +14,26 @@ export default function Sidebar(props:any) {
             role="presentation"
         >
             {/* If desktop, display the logo as well */}
-            <div className="menu-title">
-                Jerry Jeong
-            </div>
+            <Link to={`/`}>
+                <div className="menu-title">
+                    Jerry Jeong
+                </div>
+            </Link>
             <List component={"nav"} >
 
                 {/* This is where the projects go */}
-                <SidebarEntry name="About" heading={true} />
+                <SidebarEntry name="About" />
 
                 {/* Projects */}
-                <SidebarEntry name="Projects" heading={true} />
+                <SidebarEntry name="Projects" />
                 <List sx={{ pl: 2 }}>
                     {["Portfolio", "Spark", "Metallege"].map((text) => (
-                        <SidebarEntry key={text} name={text} heading={false} />
+                        <SidebarEntry key={text} name={text} category="projects" />
                     ))}
                 </List>
 
                 {/* Application section. I don't have any application to show yet */}
-                <SidebarEntry name="Applications" heading={true} />
+                <SidebarEntry name="Applications" />
             </List>
 
             {/* SNS icons */}
@@ -49,19 +48,22 @@ export default function Sidebar(props:any) {
 
 interface entryProps {
     name: string;
-    heading: boolean;
+    // The parent category of the item in menu. Assuming max 2 levels of hierachy
+    category?: string; 
 }
 
 // Function component for menu item
 function SidebarEntry(props: entryProps) {
 
     return (
-        <ListItem key={props.name} disablePadding>
-            <ListItemButton>
-                {props.heading
-                    ? <Typography variant="h6">{props.name}</Typography>
-                    : <Typography>{props.name}</Typography>}
-            </ListItemButton>
-        </ListItem>
+        <Link to={props.category ? props.category + `/` + props.name : props.name}>
+            <ListItem key={props.name} disablePadding>
+                <ListItemButton>
+                    {props.category
+                        ? <Typography>{props.name}</Typography>
+                        : <Typography variant="h6">{props.name}</Typography>}
+                </ListItemButton>
+            </ListItem>
+        </Link>
     )
 }

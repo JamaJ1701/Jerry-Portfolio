@@ -16,6 +16,11 @@ code {
 header{
   background-color: #424242;
 }
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
 .menu-title{
   
   font-size: 2rem;
@@ -24,5 +29,4 @@ header{
   padding: 20px 0px;
   align-items: center;
   text-align: center;
-  
 }

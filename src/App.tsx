@@ -1,22 +1,24 @@
-import './css/App.css';
 import { Box } from '@mui/material';
+import Header from './Header';
+import {Outlet} from 'react-router-dom'
 
-type Props = {
-  children: JSX.Element;
-}
-function App(props: Props) {
+function App() {
 
   return (
-    <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        width: { md: 'calc(100% - 250px)' },
-        ml: { md: 'calc(250px)' }
-      }}
-    >
-      {props.children}
-    </Box>
+    <>
+      <Header />
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          width: { md: 'calc(100% - 250px)' },
+          ml: { md: 'calc(250px)' }
+        }}
+      >
+        <Outlet />
+      </Box>
+    </>
+
   );
 }
 

@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import App from './App';
-import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import ErrorPage from './ErrorPage';
 import Landing from './Landing';
 import Projects from './Projects';
 
@@ -18,22 +18,25 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />
-  },
-  {
-    path: "/projects",
-    element: <Projects/>
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <Landing />
+      },
+      {
+        path: "projects",
+        element: <Projects />
+      }
+    ]
   }
 ])
 
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
-      <Header />
-      
-      <App>
-        <RouterProvider router={router}/>
-      </App>
+        <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
