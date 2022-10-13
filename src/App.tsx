@@ -1,23 +1,12 @@
 import React from 'react';
 import './css/App.css';
+import { Box } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-    </div>
+    <Box component={"main"}>
+      This is the body content
+    </Box>
   );
 }
 

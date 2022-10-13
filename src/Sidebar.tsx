@@ -8,24 +8,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Container } from "@mui/material"
 
-export default function Sidebar() {
-    const theme = useTheme();
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebar = (setOpen?: boolean) => {
-        if (setOpen) {
-            setIsOpen(setOpen);
-        } else {
-            setIsOpen(!isOpen);
-        }
-    };
-
+export default function Sidebar(props:any) {
+    
     // This is the content of sidebar menu, including the functionality. 
-    const list = (
+    return (
         <Box
             sx={{ width: 300 }}
             role="presentation"
-            onClick={() => toggleSidebar(false)}
         >
             {/* If desktop, display the logo as well */}
             <div className="menu-title">
@@ -46,13 +35,9 @@ export default function Sidebar() {
 
                 {/* Application section. I don't have any application to show yet */}
                 <SidebarEntry name="Applications" heading={true} />
-                {/* <List sx={{ pl: 2 }}>
-                    {[].map((text, index) => (
-                        <SidebarEntry name={text} heading={false} />
-                    ))}
-                </List> */}
             </List>
 
+            {/* SNS icons */}
             <Container sx={{ textAlign: "center", mt: 4 }}>
                 <GitHubIcon sx={{ fontSize: 30, pr: 3 }} />
                 <LinkedInIcon sx={{ fontSize: 30 }} />
@@ -60,20 +45,6 @@ export default function Sidebar() {
         </Box>
     );
 
-    return (
-        <>
-            <Button onClick={() => toggleSidebar(true)} sx={{ padding: 0 }}>
-                <MenuIcon sx={{ fontSize: "30" }} />
-            </Button>
-            <Drawer
-                anchor={'left'}
-                open={isOpen}
-                onClose={() => toggleSidebar(false)}
-            >
-                {list}
-            </Drawer>
-        </>
-    )
 }
 
 interface entryProps {
