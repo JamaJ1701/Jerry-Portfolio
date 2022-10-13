@@ -6,7 +6,7 @@ import Header from './Header';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

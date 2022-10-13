@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Lato','Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,4 +15,23 @@ code {
 
 header{
   background-color: #424242;
+}
+.menu-title{
+  
+  font-size: 2rem;
+  color: #9ea9ff;
+  font-weight: bold;
+  padding: 20px 0px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.nav-heading{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Not used now */
+.nav-content{
 }

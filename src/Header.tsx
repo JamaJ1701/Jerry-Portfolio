@@ -9,14 +9,14 @@ export default function Header() {
             <Grid container spacing={2} sx={{
                 height:64
                 }}>
-                <Grid item xs={4} m="auto" textAlign="center">
+                <Grid item xs={2} sx={{margin: "auto", textAlign: "center", padding: 0}}>
                     <Sidebar />
                 </Grid>
 
-                <Grid item xs={4} m="auto" textAlign="center">
-                    <img src={logo} alt="Logo" height={"40px"}/>
+                <Grid item xs={8} m="auto" textAlign="center">
+                    <img src={logo} alt="Logo" height={"30px"}/>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={2}>
                     
                 </Grid>
             </Grid>
