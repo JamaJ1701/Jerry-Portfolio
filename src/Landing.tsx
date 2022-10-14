@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Landing() {
     const theme = useTheme();
+    // Type for profession. Used for interactivity of the main page
     type profs = "UX" | "Dev" | "Eng";
     const [active, setActive] = useState<profs>("UX");
 
@@ -11,6 +12,17 @@ export default function Landing() {
         setActive(active);
     }
 
+    function BannerHeadings(prop: { heading: string, label: profs }) {
+        return (
+            <Grid item xs={10} lg={4} m={"auto"}>
+                <Button onClick={() => changeActive(prop.label)}>
+                    <Typography variant="h4" sx={{ color: active === prop.label ? theme.palette.primary.main : "#fff" }}>
+                        {prop.heading}
+                    </Typography>
+                </Button>
+            </Grid>
+        )
+    }
 
     return (
         <Box sx={{ p: 0 }}>
@@ -25,29 +37,11 @@ export default function Landing() {
                         What can I do?
                     </Typography>
                     <Grid container sx={{ mt: 4, mb: 4, textAlign: "start" }}>
-                        <Grid item xs={10} lg={4} m={"auto"}>
-                            <Button onClick={() => changeActive("UX")}>
-                                <Typography variant="h4" sx={{ color: active === "UX" ? theme.palette.primary.main : "#fff" }}>
-                                    UX Design
-                                </Typography>
-                            </Button>
-                        </Grid>
-                        <Grid item xs={10} lg={4}  m={"auto"}>
-                            <Button onClick={() => changeActive("Dev")}>
-                                <Typography variant="h4" sx={{ color: active === "Dev" ? theme.palette.primary.main : "#fff" }}>
-                                    Web Development
-                                </Typography>
-                            </Button>
-                        </Grid>
-                        <Grid item xs={10} lg={4}  m={"auto"}>
-                            <Button onClick={() => changeActive("Eng")}>
-                                <Typography variant="h4" sx={{ color: active === "Eng" ? theme.palette.primary.main : "#fff" }}>
-                                    Engineering
-                                </Typography>
-                            </Button>
-                        </Grid>
+                        <BannerHeadings heading="UX Design" label={"UX" as profs} />
+                        <BannerHeadings heading="Web Development" label={"Dev" as profs} />
+                        <BannerHeadings heading="Engineering" label={"Eng" as profs} />
                     </Grid>
-                    <Grid container sx={{ mt: 3, mb: 3, display:active == "UX" ? "flex" : "none" }}>
+                    <Grid container sx={{ mt: 3, mb: 3, display: active == "UX" ? "flex" : "none" }}>
                         {["React", "HTML", "CSS", "Typescript"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
@@ -66,7 +60,7 @@ export default function Landing() {
 }
 
 
-function KeywordBubble(prop: {content: string}) {
+function KeywordBubble(prop: { content: string }) {
 
     return (
         <Grid item xs={4} md={2}>
