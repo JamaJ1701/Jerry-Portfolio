@@ -1,13 +1,13 @@
 import Sidebar from "./Sidebar"
-import { Grid } from "@mui/material"
+import { Grid, useTheme } from "@mui/material"
 import logo from "./res/logo512-tp.png"
 import { useState } from "react"
-import { Drawer, Box } from "@mui/material";
+import { Drawer } from "@mui/material";
 import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
-
+    const theme = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const toggleSidebar = (setOpen?: boolean) => {
         if (setOpen) {
@@ -53,8 +53,7 @@ export default function Header() {
                 anchor={'left'}
                 open={isOpen}
                 variant={"permanent"}
-                onClose={() => toggleSidebar(false)}
-                sx={{ display: { xs: "none", md: "block" }, '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 250 } }}
+                sx={{ display: { xs: "none", md: "block" }}}
             >
                 <Sidebar />
             </Drawer>

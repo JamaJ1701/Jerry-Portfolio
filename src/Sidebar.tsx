@@ -1,11 +1,10 @@
 import { Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
-// import Typography from "@mui/material/Typography";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Container } from "@mui/material"
 import { Link } from "react-router-dom";
 
-export default function Sidebar(props: any) {
+export default function Sidebar() {
 
     // This is the content of sidebar menu, including the functionality. 
     return (
@@ -46,22 +45,22 @@ export default function Sidebar(props: any) {
 
 }
 
-interface entryProps {
+interface entryprop {
     name: string;
     // The parent category of the item in menu. Assuming max 2 levels of hierachy
     category?: string; 
 }
 
 // Function component for menu item
-function SidebarEntry(props: entryProps) {
+function SidebarEntry(prop: entryprop) {
 
     return (
-        <Link to={props.category ? props.category + `/` + props.name : props.name}>
-            <ListItem key={props.name} disablePadding>
-                <ListItemButton>
-                    {props.category
-                        ? <Typography>{props.name}</Typography>
-                        : <Typography variant="h6">{props.name}</Typography>}
+        <Link to={prop.category ? prop.category + `/` + prop.name : prop.name}>
+            <ListItem key={prop.name} disablePadding>
+                <ListItemButton >
+                    {prop.category
+                        ? <Typography>{prop.name}</Typography>
+                        : <Typography variant="h6">{prop.name}</Typography>}
                 </ListItemButton>
             </ListItem>
         </Link>

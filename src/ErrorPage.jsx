@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Header from "./Header";
 
 export default function ErrorPage() {
@@ -7,15 +7,17 @@ export default function ErrorPage() {
 
   return (
     <>
+{/* TODO: Change the page layout for desktop verison */}
       <Header />
-      <div id="error-page">
-        <Typography variant="h1">Oops!</Typography>
-        <p>Sorry, an unexpected error has occurred.</p>
-        <p>
-          <i>{error.statusText || error.message}</i>
-        </p>
-      </div>
+      <Box>
+        <div id="error-page">
+          <Typography variant="h1">Oops!</Typography>
+          <p>Sorry, an unexpected error has occurred.</p>
+          <p>
+            <i>{error.statusText || error.message}</i>
+          </p>
+        </div>
+      </Box>
     </>
-
   );
 }
