@@ -23,6 +23,16 @@ export default function Landing() {
             </Grid>
         )
     }
+    function KeywordBubble(prop: { content: string }) {
+
+        return (
+            <Grid item xs="auto" md="auto" >
+                <Typography variant="body1" pl={2} pr={2} sx={{ background: theme.palette.primary.main, borderRadius: "20px" }}>
+                    {prop.content}
+                </Typography>
+            </Grid>
+        )
+    }
 
     return (
         <Box sx={{ p: 0 }}>
@@ -36,13 +46,23 @@ export default function Landing() {
                     >
                         What can I do?
                     </Typography>
-                    <Grid container sx={{ mt: 4, mb: 4, textAlign: "start" }}>
+                    <Grid container sx={{ mt: 4, mb: 4, textAlign: { xs: "start", md: "center" } }}>
                         <BannerHeadings heading="UX Design" label={"UX" as profs} />
                         <BannerHeadings heading="Web Development" label={"Dev" as profs} />
                         <BannerHeadings heading="Engineering" label={"Eng" as profs} />
                     </Grid>
-                    <Grid container sx={{ mt: 3, mb: 3, display: active == "UX" ? "flex" : "none" }}>
-                        {["React", "HTML", "CSS", "Typescript"].map((text) => (
+                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "UX" ? "flex" : "none" }}>
+                        {["Prototyping", "Testing", "User Research", "Graphic design", "Figma", "Adobe Suite"].map((text) => (
+                            <KeywordBubble key={text} content={text} />
+                        ))}
+                    </Grid>
+                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "Dev" ? "flex" : "none" }}>
+                        {["React", "Typescript", "HTML", "CSS", "Javascript", "Bootstrap"].map((text) => (
+                            <KeywordBubble key={text} content={text} />
+                        ))}
+                    </Grid>
+                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "Eng" ? "flex" : "none" }}>
+                        {["Python", "C, C++", "Java", "IoT", "CAD", "PCB design"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
@@ -56,17 +76,5 @@ export default function Landing() {
 
             </Box>
         </Box>
-    )
-}
-
-
-function KeywordBubble(prop: { content: string }) {
-
-    return (
-        <Grid item xs={4} md={2}>
-            <Typography variant="button">
-                {prop.content}
-            </Typography>
-        </Grid>
     )
 }
