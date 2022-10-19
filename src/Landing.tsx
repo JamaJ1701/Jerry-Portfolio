@@ -29,7 +29,7 @@ export default function Landing() {
 
         return (
             <Grid item xs="auto" md="auto" >
-                <Typography variant="body1" pl={2} pr={2} sx={{ background: theme.palette.primary.main, borderRadius: "20px" }}>
+                <Typography variant="body1" pl={2} pr={2} m={0} sx={{ background: theme.palette.primary.main, borderRadius: "20px" }}>
                     {prop.content}
                 </Typography>
             </Grid>
@@ -48,22 +48,22 @@ export default function Landing() {
                     >
                         What can I do?
                     </Typography>
-                    <Grid container sx={{ mt: 4, mb: 4, textAlign: { xs: "start", md: "center" } }}>
+                    <Grid container sx={{ mt: 4, mb: 4, textAlign: { xs: "start", lg: "center" } }}>
                         <BannerHeadings heading="UX Design" label={"UX" as profs} />
-                        <BannerHeadings heading="Web Development" label={"Dev" as profs} />
+                        <BannerHeadings heading="Development" label={"Dev" as profs} />
                         <BannerHeadings heading="Engineering" label={"Eng" as profs} />
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "UX" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "UX" ? "flex" : "none" }}>
                         {["Prototyping", "Testing", "User Research", "Graphic design", "Figma", "Adobe Suite"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "Dev" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "Dev" ? "flex" : "none" }}>
                         {["React", "Typescript", "HTML", "CSS", "Javascript", "Bootstrap"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "Eng" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "Eng" ? "flex" : "none" }}>
                         {["Python", "C", "C++", "Java", "IoT", "CAD", "PCB design"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
@@ -80,9 +80,9 @@ export default function Landing() {
                     tags={["C", "Python"]}
                     summary="The portfolio project is something that I consider one of the best projects in my life. It was about generating a reasonable portfolio to be presented to others in same field of work or my peresonal connections, demonstrating my capabilities as a designer and developer. Material UI library was used for this project, which is a library for React websites."
                     thumbnail={require("./res/logo512-tp.png")}
+                    link="/"
                 />
             </Container>
-
         </Box>
     )
 }
