@@ -70,6 +70,7 @@ export default function Landing() {
                     </Grid>
                 </Container>
             </Box>
+            
             {/* Have featured project */}
             <Container maxWidth="md">
                 <Typography variant="h2" sx={{ textAlign: "center", mt: 4, mb: 4, color: theme.palette.primary.light }}>

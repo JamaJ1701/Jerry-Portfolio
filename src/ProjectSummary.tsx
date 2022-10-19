@@ -10,7 +10,7 @@ export function DetailedProjectSummary(prop: { title: string, tags: string[], su
                 <img src={prop.thumbnail} width="100%"/>
             </Grid>
             <Grid item xs={12} md={6} sx={{alignSelf:"center", p:{xs:5, md:2}}}>
-                <Typography variant="h2">
+                <Typography variant="h3">
                     {prop.title}
                 </Typography>
                 <Typography variant="h6">
@@ -27,3 +27,5 @@ export function DetailedProjectSummary(prop: { title: string, tags: string[], su
         </Grid>
     )
 }
+
+// Project summary card

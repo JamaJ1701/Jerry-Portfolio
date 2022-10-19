@@ -37,7 +37,7 @@ export default function Sidebar() {
 
             {/* SNS icons */}
             <Container sx={{ textAlign: "center", mt: 4 }}>
-                <GitHubIcon sx={{ fontSize: 30, pr: 3 }} />
+                <GitHubIcon sx={{ fontSize: 30, mr:3}} />
                 <LinkedInIcon sx={{ fontSize: 30 }} />
             </Container>
         </Box>

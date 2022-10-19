@@ -6,6 +6,7 @@ import { Drawer } from "@mui/material";
 import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu';
 
+// Header components. Contains interactible drawer and sidebar component
 export default function Header() {
     const theme = useTheme();
     const [isOpen, setIsOpen] = useState(false);
