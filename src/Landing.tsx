@@ -1,7 +1,9 @@
 import { Box, Typography, useTheme, Grid, Button } from "@mui/material"
 import { Container } from "@mui/system";
 import { useState } from "react";
+import { DetailedProjectSummary } from "./ProjectSummary";
 
+// TODO: Simplify the keyword grid
 export default function Landing() {
     const theme = useTheme();
     // Type for profession. Used for interactivity of the main page
@@ -16,7 +18,7 @@ export default function Landing() {
         return (
             <Grid item xs={10} lg={4} m={"auto"}>
                 <Button onClick={() => changeActive(prop.label)}>
-                    <Typography variant="h4" sx={{ color: active === prop.label ? theme.palette.primary.main : "#fff" }}>
+                    <Typography variant="h4" sx={{ color: active === prop.label ? theme.palette.primary.light : "#fff" }}>
                         {prop.heading}
                     </Typography>
                 </Button>
@@ -41,7 +43,7 @@ export default function Landing() {
                 <Container sx={{ textAlign: "center" }}>
                     <Typography
                         variant="h2"
-                        color={theme.palette.primary.main}
+                        color={theme.palette.primary.light}
                         sx={{ fontFamily: "Lato, Roboto", fontWeight: "500", mt: 4, mb: 4 }}
                     >
                         What can I do?
@@ -62,19 +64,25 @@ export default function Landing() {
                         ))}
                     </Grid>
                     <Grid container columnSpacing={4} rowSpacing={4} sx={{ justifyContent: "center", alignItems: "center", p: 3, display: active == "Eng" ? "flex" : "none" }}>
-                        {["Python", "C, C++", "Java", "IoT", "CAD", "PCB design"].map((text) => (
+                        {["Python", "C", "C++", "Java", "IoT", "CAD", "PCB design"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
                 </Container>
             </Box>
             {/* Have featured project */}
-            <Typography variant="h2">
-                Featured Project
-            </Typography>
-            <Box>
+            <Container maxWidth="md">
+                <Typography variant="h2" sx={{ textAlign: "center", mt: 4, mb: 4, color: theme.palette.primary.light }}>
+                    Featured Project
+                </Typography>
+                <DetailedProjectSummary
+                    title="Project title"
+                    tags={["C", "Python"]}
+                    summary="The portfolio project is something that I consider one of the best projects in my life. It was about generating a reasonable portfolio to be presented to others in same field of work or my peresonal connections, demonstrating my capabilities as a designer and developer. Material UI library was used for this project, which is a library for React websites."
+                    thumbnail={require("./res/logo512-tp.png")}
+                />
+            </Container>
 
-            </Box>
         </Box>
     )
 }
