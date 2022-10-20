@@ -7,9 +7,10 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { themeOptions } from './Theme';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import ErrorPage from './ErrorPage';
+import ErrorPage from './pages/ErrorPage';
 import Landing from './Landing';
-import Projects from './Projects';
+import Projects from './pages/Projects';
+import About from './pages/About';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />
+      },
+      {
+        path: "About",
+        element:<About />
       }
     ]
   }
