@@ -15,9 +15,8 @@ export default function About() {
                     </Typography>
                     <ProjectTags tags={["UX Designer", "Developer", "Engineer"]} />
                 </Box>
-                <ProjectContentSection title={about.title} content={about.overview} overview={true} />
-                {about.sections.map((section) => <ProjectContentSection title={section.heading} content={section.content} />)}
-                {/* <ProjectContentSection title={about.sections[0].heading} content={about.sections[0].content} overview={false} /> */}
+                {/* <ProjectContentSection title={about.title} body={about.overview} overview={true} /> */}
+                {about.sections.map((section) => <ProjectContentSection data={section}/>)}
             </Stack>
         </Container>
     )

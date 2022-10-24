@@ -1,26 +1,54 @@
 {
-    "title": "Who am I?",
-    "overview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin ex ut augue ornare, vel molestie nulla fermentum. In scelerisque, tortor vulputate blandit facilisis, nunc erat mollis justo, convallis blandit turpis velit a augue. ",
+    "title": "Developer, designer, engineer",
+    "overview": "An all-rounder specialising in web development, with background in UX design and engineering. Highly scalable, passionate all-rounder entering IT workforce.",
     "sections":[
         {
-            "heading": "First section",
-            "content": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin ex ut augue ornare, vel molestie nulla fermentum. In scelerisque, tortor vulputate blandit facilisis, nunc erat mollis justo, convallis blandit turpis velit a augue. Quisque eget ultricies est. Phasellus elit enim, vestibulum ut ex ac, euismod vulputate magna. Fusce maximus commodo felis, id interdum magna dictum at. Nam vel venenatis sapien, eget euismod risus. In tincidunt elit quis diam tempus, et vestibulum tellus vulputate. Nunc et egestas augue. Phasellus arcu eros, venenatis eget lorem id, tempor hendrerit felis. Quisque hendrerit id sapien eget laoreet.",
-                "Etiam tempor vehicula interdum. Quisque sodales orci ut lectus vulputate porta. Integer quam nulla, tristique quis ligula et, euismod ultrices nunc. Phasellus et tellus a augue volutpat faucibus. Duis quis tincidunt sapien. Donec a neque vel eros faucibus volutpat vel non neque. Nulla facilisi."
-            ]
-        } ,
-        {
-            "heading": "Second section",
-            "content": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin ex ut augue ornare, vel molestie nulla fermentum. In scelerisque, tortor vulputate blandit facilisis, nunc erat mollis justo, convallis blandit turpis velit a augue. Quisque eget ultricies est. Phasellus elit enim, vestibulum ut ex ac, euismod vulputate magna. Fusce maximus commodo felis, id interdum magna dictum at. Nam vel venenatis sapien, eget euismod risus. In tincidunt elit quis diam tempus, et vestibulum tellus vulputate. Nunc et egestas augue. Phasellus arcu eros, venenatis eget lorem id, tempor hendrerit felis. Quisque hendrerit id sapien eget laoreet.",
-                "Etiam tempor vehicula interdum. Quisque sodales orci ut lectus vulputate porta. Integer quam nulla, tristique quis ligula et, euismod ultrices nunc. Phasellus et tellus a augue volutpat faucibus. Duis quis tincidunt sapien. Donec a neque vel eros faucibus volutpat vel non neque. Nulla facilisi."
+            "title": "Developer, designer, engineer",
+            "type": "overview",
+            "body": [
+                "An all-rounder specialising in web development, with background in UX design and engineering. Highly scalable, passionate all-rounder entering IT workforce."
             ]
         },
         {
-            "heading": "Third section",
-            "content": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin ex ut augue ornare, vel molestie nulla fermentum. In scelerisque, tortor vulputate blandit facilisis, nunc erat mollis justo, convallis blandit turpis velit a augue. Quisque eget ultricies est. Phasellus elit enim, vestibulum ut ex ac, euismod vulputate magna. Fusce maximus commodo felis, id interdum magna dictum at. Nam vel venenatis sapien, eget euismod risus. In tincidunt elit quis diam tempus, et vestibulum tellus vulputate. Nunc et egestas augue. Phasellus arcu eros, venenatis eget lorem id, tempor hendrerit felis. Quisque hendrerit id sapien eget laoreet.",
-                "Etiam tempor vehicula interdum. Quisque sodales orci ut lectus vulputate porta. Integer quam nulla, tristique quis ligula et, euismod ultrices nunc. Phasellus et tellus a augue volutpat faucibus. Duis quis tincidunt sapien. Donec a neque vel eros faucibus volutpat vel non neque. Nulla facilisi."
+            "title": "Who I want to be",
+            "type": "paragraph",
+            "body": [
+                "Since my childhood, I was interested in building interesting things. That was my motivation to study mechatronics engineering because it is about the whole process of making a device, from hardware to software. Then I realised my skillset is focused on implementation and problems solving during the process, while design was another important aspect of my goal. This led me to continue my study in UX design, where I also learned frontend development.",
+
+                "Currently, I want to start my career as a frontend developer and work on commercial projects that will allow me to upskill, gain more insight about the industry and build connections with others. My next goal is to become a full stack developer with strong capabilities, so that I can be involved on the whole development cycle. With development being the primary focus, I will maintain my capabilities as a UX designer by updating myself with latest trends.",
+
+                "Afterwards, I want to develop my management capabilities and gradually move towards management role to oversee different projects. My diverse background in design and development will allow me to understand the product lifecycle once I am more experienced, with will allow me to become a project manager or product owner. That is why I decided to become a full-stack engineer, while keeping up-to-date with the design trends."
+            ]
+        },
+        {
+            "title": "Who I am",
+            "type": "paragraph",
+            "body": [
+                "During my studies as a mechatronics engineering, I focused on the software and electronics engineering by devoting all my elective courses to related topics. Through the degree and internships, I’ve utilised languages such as C, C++, Java and Python and engineering concepts such as wireless communication, machine learning, computer vision, circuit design, embedded systems and multithreading. For my honours thesis topic, I created and tested different search interfaces in VR using Unity3D.",
+
+                "During my postgraduate study, I learnt UX design principles and the frontend technologies required to produce different projects. This includes HTML, CSS, and JS with frameworks and libraries such as Bootstrap, React, Three.js, Material UI. I am constantly improving my skills via personal projects that utilise those technologies along with other commonly used ones such as Typescript. I also worked with FHIR API in one of my projects, which is designed to be used in medical systems.",
+
+                "As a freelancer web designer/developer, I’ve also produced number of different websites using Wordpress and Cafe24 (a Korean eCommerce platform). For these projects I was in charge of everything, including the platform selection, design, management, development, and producing graphical assets and documentation for other workers. The role also included some design/marketing work, requiring me to produce some marketing material, manage different channels and set up Google analytics.",
+
+                "For more detail about my previous projects, please have a look at the project pages in this website! "
+            ]
+        },
+        {
+            "title": "Work history",
+            "type": "timeline",
+            "body": [
+                "Jul. 2022 ~ Current GUIROE by SSGG Yeoback, Korea as web developer",
+                "Tutor at UQ",
+                "Shorthand",
+                "Verton"
+            ]
+        },
+        {
+            "title": "Education",
+            "type": "timeline",
+            "body": [
+                "Bachelor of mechatronics engineering (Honours), The University of Queensland",
+                "Graduate diploma of Interaction design, The University of Queensland"
             ]
         }
     ]
