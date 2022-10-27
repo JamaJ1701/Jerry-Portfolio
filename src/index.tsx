@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import App from './App';
@@ -9,8 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage';
 import Landing from './Landing';
-import Projects from './pages/Projects';
-import About from './pages/About';
+import ProjectCollection from './pages/ProjectCollection';
 import projectContents from './pages/content/projectContents'
 import ProjectDetail from './pages/ProjectDetail';
 
@@ -30,11 +29,16 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <ProjectDetail content={projectContents["about"]} />
+        element: <ProjectCollection />,
       },
       {
-        path: "About",
-        element:<About />
+        path:"projects/Spark",
+        element: <ProjectDetail content={projectContents["spark"]} />
+      },
+      {
+        // about page is still rendered using the project Content template.
+        path: "about",
+        element:<ProjectDetail content={projectContents["about"]} />
       }
     ]
   }

@@ -1,0 +1,55 @@
+{
+    "pageTitle":"Spark",
+    "projectTags":["Web Server", "OpenCV", "IoT", "Python", "C"],
+    "sections":[
+        {
+            "title": "Enhancing social interactions",
+            "type": "paragraph",
+            "body": [
+                "Through research, the team identified that people are often reluctant in initiating social interactions during social events. This was because they were uncertain whether the interaction would be successful, and they wanted to avoid unsuccessful interactions. The Spark system was designed reduce this uncertainty by giving users additional information about other people using light and vibration, enhancing social interactions within social events. The device also allows it users to play a little guessing game, further diversifying the conversation topics."
+            ]
+        },
+        {
+            "title": "Design process",
+            "type": "paragraph",
+            "body": [
+                "During the initial phase of the project, I focused on the researching the problem space. I’ve conducted an interview and reviewed number of literatures related to the social interactions, and how the design could reduce the social barrier between its users. Key findings from my research were analysed and shared with other team members, guiding our design process throughout the semester. The research findings could be found in our team Miro board (link at the bottom of website).",
+
+                "After the development of initial design, I actively facilitated and participated in discussions related to our design, suggesting possible ideas and evaluating them with the team. Having constructive team discussions throughout the semester allowed us to reach the final design and the prototype we developed. I also encouraged the team to be on the same page the semester by communicating with both internal and external team members, often summarising the key tasks we have to complete and sharing with the team in Slack."
+            ]
+        },
+        {
+            "title": "Questionnaire",
+            "type": "paragraph",
+            "body": [
+                "Once the user enters an event venue, they will answer a questionnaire. This questionnaire consists of questions that could act as conversation starters, tailored for that specific social event. This could be their personal interests, demographics or anything that would interest the event participants."
+            ]
+        },
+        {
+            "title": "LED Lights",
+            "type": "paragraph",
+            "body": [
+                "Array of lights on the Spark hat represent the responses to the questionnaire, which is visible to all other participants of the event. This lights inform other users about the possible conversation topics, allowing them to easily approach the user. The order of lights are different to questions from the questionnaire, allowing them to be used as a conversation prop."
+            ]
+        },
+        {
+            "title": "Vibration",
+            "type": "paragraph",
+            "body": [
+                "The users will feel different type of vibrations from their preferred wearable device when they look at others. The strength and frequency of this vibration depends on their similarity with their counterpart, which is calculated based on the questionnaire response. The vibration will get more frequent and stronger the more they share with that person, allowing them to identify people who share similar interest with them."
+            ]
+        },
+        {
+            "title": "Literatures reviewed",
+            "type": "list",
+            "body": [
+                "J. Schroeder, D. Lyons, and N. Epley, “Hello, Stranger? Pleasant Conversations Are Preceded by Concerns About Starting One,”(2021).",
+                "P. Mandeno and W. L. Baxter, “Six principles for the design of better networking events,” (2021).",
+                "J.Y Williams, Why You're Afraid Of Networking (And What To Do About It), Forbes, March 2020.",
+                "R. S. Albert and T. R. Brigante, “The Psychology of Friendship Relations: Social Factors,”(1962)",
+                "G. M. Sandstrom and E. J. Boothby, “Why do people avoid talking to strangers? A mini meta-analysis of predicted fears and actual experiences talking to a stranger,”(2021).",
+                "Epley, N., Kardas, M., Zhao, X., Atir, S., & Schroeder, J. \"Undersociality: miscalibrated social cognition can inhibit social connection\"(2022)."
+            ]
+        }
+    ]
+}

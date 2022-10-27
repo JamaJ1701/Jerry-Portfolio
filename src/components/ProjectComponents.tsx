@@ -102,11 +102,11 @@ export function ProjectContentSection(prop: { data: projectSection }) {
 function ParagraphSection(prop: { content: projectSection, overview: boolean }) {
     return (
         <Box>
-            <Typography variant="h4" sx={{ fontSize: prop.overview ? 36 : 32 }}>
-                {prop.content.title}
+            <Typography variant="h4" >
+                {prop.overview ? "" : prop.content.title}
             </Typography>
             {prop.content.body.map((text) =>
-                <Typography variant="body1" m={2} sx={{ fontSize: prop.overview ? 24 : 18, textAlign: "flex-start" }}>{text}</Typography>
+                <Typography variant="body1" m={2} sx={{ fontSize: prop.overview ? "1.5rem" : "1rem", textAlign: "flex-start" }}>{text}</Typography>
             )}
         </Box>
     )
@@ -115,24 +115,25 @@ function ParagraphSection(prop: { content: projectSection, overview: boolean }) 
 // list section for 
 function ListSection(prop: { content: projectSection, timeline: boolean }) {
 
-    if (!prop.content.subheadings || prop.content.body.length != prop.content.subheadings.length) {
-        console.log("The length of timeline contents and headings are different")
-        return <></>
-    }
+
     if (prop.timeline) {
+        if (!prop.content.subheadings || prop.content.body.length != prop.content.subheadings.length) {
+            console.log("The length of timeline contents and headings are different")
+            return <></>
+        }
         return (
             <Box>
-                <Typography variant="h4" sx={{ fontSize: 32 }}>
+                <Typography variant="h4">
                     {prop.content.title}
                 </Typography>
                 <List>
                     {prop.content.subheadings.map((heading, i) => (
                         <ListItem>
-                            <ListItemText 
-                            primary={heading} 
-                            primaryTypographyProps={{sx:{fontSize:20}}}
-                            secondary={prop.content.body[i]}
-                            secondaryTypographyProps={{sx:{fontSize:16}}}
+                            <ListItemText
+                                primary={heading}
+                                primaryTypographyProps={{ sx: { fontSize: 20 } }}
+                                secondary={prop.content.body[i]}
+                                secondaryTypographyProps={{ sx: { fontSize: 16 } }}
                             />
                         </ListItem>
                     ))}
@@ -143,13 +144,13 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
     } else {
         return (
             <Box>
-                <Typography variant="h4" sx={{ fontSize: 32 }}>
+                <Typography variant="h4">
                     {prop.content.title}
                 </Typography>
                 <List>
-                    {prop.content.subheadings.map((heading, i) =>
+                    {prop.content.body.map((content) =>
                         <ListItem>
-                            <ListItemText primary={heading} secondary={prop.content.body[i]} />
+                            <ListItemText primary={content} />
                         </ListItem>)}
                 </List>
             </Box>
@@ -160,6 +161,6 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
 
 // Check if the given project section type is valid
 // returns non-zero if it is not a valid type
-export function assertProjectSection(section: projectSection): boolean{
+export function assertProjectSection(section: projectSection): boolean {
     return sections.includes(section.type as SectionType)
 }
