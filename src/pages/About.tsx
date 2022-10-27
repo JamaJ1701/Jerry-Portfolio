@@ -2,7 +2,7 @@ import { Typography, Stack, Box, Container } from "@mui/material"
 import { ProjectTags } from "../components/ProjectComponents"
 import { ProjectContentSection } from "../components/ProjectComponents"
 import about from "./content/about.json"
-import projectContents from './content/projects'
+import projectContents from './content/projectContents'
 // About page
 
 export default function About() {

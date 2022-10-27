@@ -11,6 +11,8 @@ import ErrorPage from './pages/ErrorPage';
 import Landing from './Landing';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import projectContents from './pages/content/projectContents'
+import ProjectDetail from './pages/ProjectDetail';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Projects />
+        element: <ProjectDetail content={projectContents["about"]} />
       },
       {
         path: "About",

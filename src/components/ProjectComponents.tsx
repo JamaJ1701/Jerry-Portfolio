@@ -1,7 +1,36 @@
-import { RepartitionRounded } from "@mui/icons-material";
 import { Grid, Button, Typography, Box, List, ListItem, ListItemText } from "@mui/material"
 
-// Project summary for in a row layout.
+
+// public interfaces
+export interface projectPageContent {
+    pageTitle: string;
+    projectTags: string[];
+    sections: projectSection[];
+}
+
+// private interfaces and types
+
+// Different types of project content, used in the json files.
+// type projectSectionType = "overview" | "paragraph" | "list" | "image";
+const sections = ['overview', 'paragraph', 'list', 'image', 'timeline'] as const;
+type SectionType = typeof sections[number];
+
+/**
+ * Interface for project section item format
+ */
+interface projectSection {
+    title: string;
+    type: string;
+    body: string[];
+    subheadings?: string[];
+}
+
+
+/**
+ * Project summary for in a row layout.
+ * @param prop 
+ * @returns 
+ */
 export function DetailedProjectSummary(prop: { title: string, tags: string[], summary: string, thumbnail: string, link: string }) {
     return (
         <Grid container sx={{ mt: 4, mb: 4 }}>
@@ -27,7 +56,11 @@ export function DetailedProjectSummary(prop: { title: string, tags: string[], su
     )
 }
 
-// Project Tags component. Takes in tags in the form of string array
+/**
+ * Component that renders project tags.
+ * @param prop 
+ * @returns 
+ */
 export function ProjectTags(prop: { tags: string[] }) {
     return (
         <Typography variant="h6">
@@ -36,21 +69,11 @@ export function ProjectTags(prop: { tags: string[] }) {
     )
 }
 
-// Different types of project content, used in the json files.
-// type projectSectionType = "overview" | "paragraph" | "list" | "image";
-const sections = ['overview', 'paragraph', 'list', 'image', 'timeline'] as const;
-type SectionType = typeof sections[number];
-interface projectSection {
-    title: string;
-    type: string;
-    body: string[];
-    subheadings?: string[];
-}
 
 // Project content generation based on json content type. 
 export function ProjectContentSection(prop: { data: projectSection }) {
 
-    if (!sections.includes(prop.data.type as SectionType)) {
+    if (!assertProjectSection(prop.data)) {
         return <Box>Content error</Box>
     }
     switch (prop.data.type) {
@@ -73,7 +96,7 @@ export function ProjectContentSection(prop: { data: projectSection }) {
     }
 }
 
-// Internal functions
+// Private functions
 
 // Paragraph section component, which generates overview or content paragraph
 function ParagraphSection(prop: { content: projectSection, overview: boolean }) {
@@ -134,12 +157,9 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
     }
 }
 
-// Asserts the section content, making sure all relevant fields are there.
-function assertSection(content: projectSection): number {
 
-    if (sections.includes(content.type as SectionType)) {
-        return 0;
-    } else {
-        return 1;
-    }
+// Check if the given project section type is valid
+// returns non-zero if it is not a valid type
+export function assertProjectSection(section: projectSection): boolean{
+    return sections.includes(section.type as SectionType)
 }
