@@ -1,6 +1,6 @@
 {
-    "title": "Developer, designer, engineer",
-    "overview": "An all-rounder specialising in web development, with background in UX design and engineering. Highly scalable, passionate all-rounder entering IT workforce.",
+    "pageTitle":"About Me",
+    "projectTags":["UX Designer, Developer, Engineer"],
     "sections":[
         {
             "title": "Developer, designer, engineer",
@@ -17,18 +17,18 @@
 
                 "Currently, I want to start my career as a frontend developer and work on commercial projects that will allow me to upskill, gain more insight about the industry and build connections with others. My next goal is to become a full stack developer with strong capabilities, so that I can be involved on the whole development cycle. With development being the primary focus, I will maintain my capabilities as a UX designer by updating myself with latest trends.",
 
-                "Afterwards, I want to develop my management capabilities and gradually move towards management role to oversee different projects. My diverse background in design and development will allow me to understand the product lifecycle once I am more experienced, with will allow me to become a project manager or product owner. That is why I decided to become a full-stack engineer, while keeping up-to-date with the design trends."
+                "Afterwards, I want to develop my management capabilities and gradually move towards management role to oversee different projects. My diverse background in design and development will allow me to understand the product lifecycle once I am more experienced, with will allow me to become a project manager or product owner. That is why I decided to become a full-stack engineer, while keeping up to date with the design trends."
             ]
         },
         {
             "title": "Who I am",
             "type": "paragraph",
             "body": [
-                "During my studies as a mechatronics engineering, I focused on the software and electronics engineering by devoting all my elective courses to related topics. Through the degree and internships, I’ve utilised languages such as C, C++, Java and Python and engineering concepts such as wireless communication, machine learning, computer vision, circuit design, embedded systems and multithreading. For my honours thesis topic, I created and tested different search interfaces in VR using Unity3D.",
+                "During my studies as a mechatronics engineering, I focused on the software and electronics engineering by devoting all my elective courses to related topics. Through the degree and internships, I’ve utilised languages such as C, C++, Java and Python and engineering concepts such as wireless communication, machine learning, computer vision, circuit design, embedded systems, and multithreading. For my honour’s thesis topic, I created and tested different search interfaces in VR using Unity3D.",
 
-                "During my postgraduate study, I learnt UX design principles and the frontend technologies required to produce different projects. This includes HTML, CSS, and JS with frameworks and libraries such as Bootstrap, React, Three.js, Material UI. I am constantly improving my skills via personal projects that utilise those technologies along with other commonly used ones such as Typescript. I also worked with FHIR API in one of my projects, which is designed to be used in medical systems.",
+                "During my postgraduate study, I learnt UX design principles, and the frontend technologies required to produce different projects. This includes HTML, CSS, and JS with frameworks and libraries such as Bootstrap, React, Three.js, Material UI. I am constantly improving my skills via personal projects that utilise those technologies along with other commonly used ones such as Typescript. I also worked with FHIR API in one of my projects, which is designed to be used in medical systems.",
 
-                "As a freelancer web designer/developer, I’ve also produced number of different websites using Wordpress and Cafe24 (a Korean eCommerce platform). For these projects I was in charge of everything, including the platform selection, design, management, development, and producing graphical assets and documentation for other workers. The role also included some design/marketing work, requiring me to produce some marketing material, manage different channels and set up Google analytics.",
+                "As a freelancer web designer/developer, I’ve also produced number of different websites using Wordpress and Cafe24 (a Korean eCommerce platform). For these projects I oversaw everything, including the platform selection, design, management, development, and producing graphical assets and documentation for other workers. The role also included some design/marketing work, requiring me to produce some marketing material, manage different channels and set up Google analytics.",
 
                 "For more detail about my previous projects, please have a look at the project pages in this website! "
             ]
@@ -36,19 +36,29 @@
         {
             "title": "Work history",
             "type": "timeline",
+            "subheadings": [
+                "Web Designer, GUIROE by SSGG Yeoback",
+                "Course Tutor, The University of Queensland",
+                "Intern Engineer, Shorthand",
+                "Undergraduate Engineer, Verton"
+            ],
             "body": [
-                "Jul. 2022 ~ Current GUIROE by SSGG Yeoback, Korea as web developer",
-                "Tutor at UQ",
-                "Shorthand",
-                "Verton"
+                "Jul. 2022 ~ Current",
+                "Feb. 2022 ~ Jun. 2022",
+                "Nov. 2021 ~ Feb. 2022",
+                "Oct. 2019 ~ Feb. 2020"
             ]
         },
         {
             "title": "Education",
             "type": "timeline",
+            "subheadings": [
+                "Graduate diploma of Interaction design, The University of Queensland",
+                "Bachelor of mechatronics engineering (Honours), The University of Queensland"
+            ],
             "body": [
-                "Bachelor of mechatronics engineering (Honours), The University of Queensland",
-                "Graduate diploma of Interaction design, The University of Queensland"
+                "Feb. 2021 ~ Jun. 2022",
+                "Feb. 2015 ~ Jul. 2020"
             ]
         }
     ]

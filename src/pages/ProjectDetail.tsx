@@ -5,7 +5,7 @@ import about from "./content/about.json"
 import projectContents from './content/projects'
 // About page
 
-export default function About() {
+export default function About(prop:{content:object}) {
 
     return (
         <Container maxWidth="lg">
