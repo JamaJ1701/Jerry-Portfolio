@@ -4,7 +4,7 @@ import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { themeOptions } from './Theme';
+import { lightTheme, themeOptions } from './Theme';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage';
@@ -12,6 +12,7 @@ import Landing from './Landing';
 import ProjectCollection from './pages/ProjectCollection';
 import projectContents from './pages/content/projectContents'
 import ProjectDetail from './pages/ProjectDetail';
+import Spark from './pages/Spark';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path:"projects/Spark",
-        element: <ProjectDetail content={projectContents["spark"]} />
+        element: <Spark content={projectContents["spark"]} />
       },
       {
         // about page is still rendered using the project Content template.
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={themeOptions}>
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <RouterProvider router={router} />
     </ThemeProvider>

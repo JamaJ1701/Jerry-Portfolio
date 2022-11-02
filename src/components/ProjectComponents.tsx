@@ -157,7 +157,9 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
         )
     }
 }
-
+function BannerSection(prop:{path:string}){
+    
+}
 
 // Check if the given project section type is valid
 // returns non-zero if it is not a valid type

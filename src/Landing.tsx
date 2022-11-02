@@ -18,7 +18,7 @@ export default function Landing() {
         return (
             <Grid item xs={10} lg={4} m={"auto"}>
                 <Button onClick={() => changeActive(prop.label)}>
-                    <Typography variant="h4" sx={{ color: active === prop.label ? theme.palette.primary.light : "#fff" }}>
+                    <Typography variant="h4" sx={{ color: active === prop.label ? theme.palette.primary.light : "#a0a0a0" }}>
                         {prop.heading}
                     </Typography>
                 </Button>
@@ -29,7 +29,7 @@ export default function Landing() {
 
         return (
             <Grid item xs="auto" md="auto" >
-                <Typography variant="body1" pl={2} pr={2} m={0} sx={{ background: theme.palette.primary.main, borderRadius: "20px" }}>
+                <Typography variant="body1" pl={2} pr={2} m={0} sx={{ background: theme.palette.primary.main, borderRadius: "20px", color:"#fff" }}>
                     {prop.content}
                 </Typography>
             </Grid>
@@ -39,14 +39,14 @@ export default function Landing() {
     return (
         <Box sx={{ p: 0 }}>
             {/* Have the banner */}
-            <Box sx={{ background: "#070707", pt: 4, pb: 4 }}>
+            <Box sx={{ background:"#f0f0fa", pt: 4, pb: 4 }}>
                 <Container sx={{ textAlign: "center" }}>
                     <Typography
                         variant="h2"
                         color={theme.palette.primary.light}
-                        sx={{ fontFamily: "Lato, Roboto", fontWeight: "500", mt: 4, mb: 4 }}
+                        sx={{ fontFamily: "Lato, Roboto", fontWeight: "700", mt: 4, mb: 4 }}
                     >
-                        What can I do?
+                        JERRY JEONG
                     </Typography>
                     <Grid container sx={{ mt: 4, mb: 4, textAlign: { xs: "start", lg: "center" } }}>
                         <BannerHeadings heading="UX Design" label={"UX" as profs} />

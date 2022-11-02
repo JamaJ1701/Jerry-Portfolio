@@ -20,10 +20,14 @@ a{
   color: inherit;
   text-decoration: none;
 }
+
+  /* img{
+    width: 100%;
+  } */
 .menu-title{
   
   font-size: 2rem;
-  color: #9ea9ff;
+  color: #6667ab;
   font-weight: bold;
   padding: 20px 0px;
   align-items: center;

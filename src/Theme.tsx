@@ -3,6 +3,25 @@
 
 import { createTheme } from '@mui/material/styles';
 
+export const lightTheme = createTheme({
+    typography:{
+        h4:{
+            color: "#523f90",
+            fontWeight: 700
+        }
+    },
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#523f90',
+            light: '#6667AB',
+        },
+        secondary: {
+            main: '#fb5d45',
+        },
+    },
+});
+
 export const themeOptions = createTheme({
     palette: {
         mode: 'dark',
