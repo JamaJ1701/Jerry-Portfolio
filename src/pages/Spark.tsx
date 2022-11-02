@@ -2,7 +2,7 @@ import { Typography, Stack, Box, Container, useTheme } from "@mui/material"
 import { ProjectTags } from "../components/ProjectComponents"
 import { ProjectContentSection } from "../components/ProjectComponents"
 import { projectPageContent } from "../components/ProjectComponents"
-import TwoColumnVideo from "../components/TwoColumnVideo";
+import VideoTwoCol from "../components/VideoTwoCol";
 
 // About page
 
@@ -19,11 +19,13 @@ export default function Spark(prop:{content:projectPageContent}) {
                 </Box>
                 <img src={require("../res/sparkBanner.png")} />
                 
-                <TwoColumnVideo 
+                <VideoTwoCol 
                 heading="Enhancing social interactions" 
                 content="Through research" 
                 link="https://www.youtube.com/embed/QewGZPsnylU" />
+                
                 {prop.content.sections.map((section) => <ProjectContentSection data={section}/>)}
+
             </Stack>
         </Container>
     )

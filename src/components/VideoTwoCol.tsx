@@ -1,6 +1,6 @@
 import { Grid, Typography, useTheme, Box } from "@mui/material"
 
-export default function TwoColumnVideo(prop: { heading: string, content: string, link: string }) {
+export default function VideoTwoCol(prop: { heading: string, content: string, link: string }) {
     const theme = useTheme();
     return (
         <Box >
