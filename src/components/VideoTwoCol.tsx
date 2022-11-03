@@ -6,7 +6,7 @@ export default function VideoTwoCol(prop: { heading: string, content: string, li
         <Box >
             <Grid container sx={{ minHeight: 360 }}>
                 <Grid item xs={6}>
-                    <Typography variant="h4" >
+                    <Typography variant="h3" >
                         {prop.heading}
                     </Typography>
                     {prop.content}

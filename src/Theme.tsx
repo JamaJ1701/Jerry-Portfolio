@@ -5,9 +5,10 @@ import { createTheme } from '@mui/material/styles';
 
 export const lightTheme = createTheme({
     typography:{
-        h4:{
+        h3:{
             color: "#523f90",
-            fontWeight: 700
+            fontWeight: 700,
+            fontSize: "2rem"
         }
     },
     palette: {

@@ -78,9 +78,9 @@ export function ProjectContentSection(prop: { data: projectSection }) {
     }
     switch (prop.data.type) {
         case "overview":
-            return <ParagraphSection content={prop.data} overview={true} />
+            return <ParagraphSection content={prop.data} fontSize="1.5rem" />
         case "paragraph":
-            return <ParagraphSection content={prop.data} overview={false} />
+            return <ParagraphSection content={prop.data} fontSize="1rem" />
         case "list":
             return <ListSection content={prop.data} timeline={false} />
         case "timeline":
@@ -99,14 +99,14 @@ export function ProjectContentSection(prop: { data: projectSection }) {
 // Private functions
 
 // Paragraph section component, which generates overview or content paragraph
-function ParagraphSection(prop: { content: projectSection, overview: boolean }) {
+function ParagraphSection(prop: { content: projectSection, fontSize:string }) {
     return (
         <Box>
-            <Typography variant="h4" >
-                {prop.overview ? "" : prop.content.title}
+            <Typography variant="h3" >
+                {prop.content.title}
             </Typography>
             {prop.content.body.map((text) =>
-                <Typography variant="body1" m={2} sx={{ fontSize: prop.overview ? "1.5rem" : "1rem", textAlign: "flex-start" }}>{text}</Typography>
+                <Typography variant="body1" m={2} sx={{ fontSize: prop.fontSize, textAlign: "flex-start" }}>{text}</Typography>
             )}
         </Box>
     )
@@ -123,7 +123,7 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
         }
         return (
             <Box>
-                <Typography variant="h4">
+                <Typography variant="h3">
                     {prop.content.title}
                 </Typography>
                 <List>
@@ -144,7 +144,7 @@ function ListSection(prop: { content: projectSection, timeline: boolean }) {
     } else {
         return (
             <Box>
-                <Typography variant="h4">
+                <Typography variant="h3">
                     {prop.content.title}
                 </Typography>
                 <List>
