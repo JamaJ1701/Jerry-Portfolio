@@ -1,6 +1,6 @@
 import { Typography, Stack, Box, Container } from "@mui/material"
-import { ProjectTags } from "../components/ProjectComponents"
-import { ProjectContentSection } from "../components/ProjectComponents"
+import ProjectTags from "../components/ProjectTags"
+import AutomatedSection from "../components/AutomatedSection"
 import about from "./content/about.json"
 import projectContents from './content/projectContents'
 // About page
@@ -16,7 +16,7 @@ export default function About() {
                     </Typography>
                     <ProjectTags tags={about.projectTags} />
                 </Box>
-                {about.sections.map((section) => <ProjectContentSection data={section}/>)}
+                {about.sections.map((section) => <AutomatedSection data={section}/>)}
             </Stack>
         </Container>
     )

@@ -1,7 +1,7 @@
 import { Typography, Stack, Box, Container, useTheme } from "@mui/material"
-import { ProjectTags } from "../components/ProjectComponents"
-import { ProjectContentSection } from "../components/ProjectComponents"
-import { projectPageContent } from "../components/ProjectComponents"
+import { ProjectTags } from "../components/baseProjectTypes"
+import { ProjectContentSection } from "../components/baseProjectTypes"
+import { projectPageContent } from "../components/baseProjectTypes"
 
 // About page
 

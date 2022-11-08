@@ -1,7 +1,7 @@
 import { Typography, Stack, Box, Container, useTheme, CardMedia, Button, Card, CardActions, CardContent, Grid } from "@mui/material"
-import { ProjectTags } from "../components/ProjectComponents"
-import { ProjectContentSection } from "../components/ProjectComponents"
-import { projectPageContent } from "../components/ProjectComponents"
+import { projectPageContent } from "../components/baseProjectTypes";
+import ProjectTags from "../components/ProjectTags";
+import AutomatedSection from "../components/AutomatedSection";
 import VideoTwoCol from "../components/VideoTwoCol";
 
 // About page
@@ -23,16 +23,15 @@ export default function Spark(prop: { content: projectPageContent }) {
                     heading="Enhancing social interactions"
                     content="Through research"
                     link="https://www.youtube.com/embed/QewGZPsnylU" />
-                    <Grid container>
-                        <Grid item xs={4} sx={{textAlign:"center"}}>
+                <Grid container>
+                    <Grid item xs={4} sx={{ textAlign: "center" }}>
                         <img src={require("../res/spark_icon_led.png")} />
                         <Typography variant="h5">Led lights</Typography>
-                        <Typography variant="body1" sx={{textAlign: "start"}}>
-                        Array of lights on the Spark hat represent the responses to the questionnaire, which is visible to all other participants of the event. This lights inform other users about the possible conversation topics, allowing them to easily approach the user. The order of lights are different to questions from the questionnaire, allowing them to be used as a conversation prop. 
+                        <Typography variant="body1" sx={{ textAlign: "start" }}>
+                            Array of lights on the Spark hat represent the responses to the questionnaire, which is visible to all other participants of the event. This lights inform other users about the possible conversation topics, allowing them to easily approach the user. The order of lights are different to questions from the questionnaire, allowing them to be used as a conversation prop.
                         </Typography>
-                        </Grid>
-                        
                     </Grid>
+                </Grid>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardMedia
                         component="img"
@@ -46,11 +45,11 @@ export default function Spark(prop: { content: projectPageContent }) {
                             Led
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                        Array of lights on the Spark hat represent the responses to the questionnaire, which is visible to all other participants of the event. This lights inform other users about the possible conversation topics, allowing them to easily approach the user. The order of lights are different to questions from the questionnaire, allowing them to be used as a conversation prop. 
+                            Array of lights on the Spark hat represent the responses to the questionnaire, which is visible to all other participants of the event. This lights inform other users about the possible conversation topics, allowing them to easily approach the user. The order of lights are different to questions from the questionnaire, allowing them to be used as a conversation prop.
                         </Typography>
                     </CardContent>
                 </Card>
-                {prop.content.sections.map((section) => <ProjectContentSection data={section} />)}
+                {prop.content.sections.map((section) => <AutomatedSection data={section} />)}
 
             </Stack>
         </Container>

@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme, Grid, Button } from "@mui/material"
 import { Container } from "@mui/system";
 import { useState } from "react";
-import { DetailedProjectSummary } from "./components/ProjectComponents";
+import { DetailedProjectSummary } from "./components/baseProjectTypes";
 
 // TODO: Simplify the keyword grid
 export default function Landing() {
