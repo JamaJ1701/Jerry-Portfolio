@@ -1,10 +1,10 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { lightTheme, themeOptions } from './Theme';
+import { lightTheme} from './Theme';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage';

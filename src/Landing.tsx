@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme, Grid, Button } from "@mui/material"
 import { Container } from "@mui/system";
 import { useState } from "react";
-import { DetailedProjectSummary } from "./components/baseProjectTypes";
+import { ProjectSummaryBlock } from "./components/ProjectSummaryBlock";
 
 // TODO: Simplify the keyword grid
 export default function Landing() {
@@ -76,7 +76,7 @@ export default function Landing() {
                 <Typography variant="h2" sx={{ textAlign: "center", mt: 4, mb: 4, color: theme.palette.primary.light }}>
                     Featured Project
                 </Typography>
-                <DetailedProjectSummary
+                <ProjectSummaryBlock
                     title="Project title"
                     tags={["C", "Python"]}
                     summary="The portfolio project is something that I consider one of the best projects in my life. It was about generating a reasonable portfolio to be presented to others in same field of work or my peresonal connections, demonstrating my capabilities as a designer and developer. Material UI library was used for this project, which is a library for React websites."

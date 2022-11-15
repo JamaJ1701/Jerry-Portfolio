@@ -4,6 +4,13 @@
     "sections":[
         {
             "title": "Enhancing social interactions",
+            "type": "videoTwoCol",
+            "body": 
+                "Through research, the team identified that people are often reluctant in initiating social interactions during social events. This was because they were uncertain whether the interaction would be successful, and they wanted to avoid unsuccessful interactions. The Spark system was designed reduce this uncertainty by giving users additional information about other people using light and vibration, enhancing social interactions within social events. The device also allows it users to play a little guessing game, further diversifying the conversation topics.",
+            "link": "https://www.youtube.com/embed/QewGZPsnylU"
+        },
+        {
+            "title": "Enhancing social interactions",
             "type": "paragraph",
             "body": [
                 "Through research, the team identified that people are often reluctant in initiating social interactions during social events. This was because they were uncertain whether the interaction would be successful, and they wanted to avoid unsuccessful interactions. The Spark system was designed reduce this uncertainty by giving users additional information about other people using light and vibration, enhancing social interactions within social events. The device also allows it users to play a little guessing game, further diversifying the conversation topics."

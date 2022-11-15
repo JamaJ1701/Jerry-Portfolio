@@ -20,9 +20,8 @@ export default function Spark(prop: { content: projectPageContent }) {
                 <img src={require("../res/sparkBanner.png")} />
 
                 <VideoTwoCol
-                    heading="Enhancing social interactions"
-                    content="Through research"
-                    link="https://www.youtube.com/embed/QewGZPsnylU" />
+                    content={prop.content.sections[0]}
+                    />
                 <Grid container>
                     <Grid item xs={4} sx={{ textAlign: "center" }}>
                         <img src={require("../res/spark_icon_led.png")} />

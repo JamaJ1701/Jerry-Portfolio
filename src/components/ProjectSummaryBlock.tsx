@@ -6,7 +6,7 @@ import ProjectTags from "./ProjectTags"
  * @param prop 
  * @returns 
  */
- export function DetailedProjectSummary(prop: { title: string, tags: string[], summary: string, thumbnail: string, link: string }) {
+ export function ProjectSummaryBlock(prop: { title: string, tags: string[], summary: string, thumbnail: string, link: string }) {
     return (
         <Grid container sx={{ mt: 4, mb: 4 }}>
 

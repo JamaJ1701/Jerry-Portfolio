@@ -1,20 +1,25 @@
 import { Typography, Box, List, ListItem, ListItemText } from "@mui/material"
-import { projectSection } from "./baseProjectTypes"
+import { isParagraph, projectSection, assertProjectSection } from "./baseProjectTypes"
 
 // list section for 
-export default function ListSection(prop: { content: projectSection, timeline: boolean }) {
+export default function ListSection(prop: { content: projectSection }) {
+    assertProjectSection(prop.content);
+    if (isParagraph(prop.content.body)) {
+        return (
+            <Box>
+                <Typography variant="h3">
+                    {prop.content.title}
+                </Typography>
 
-    return (
-        <Box>
-            <Typography variant="h3">
-                {prop.content.title}
-            </Typography>
-            <List>
-                {prop.content.body.map((content) =>
-                    <ListItem>
-                        <ListItemText primary={content} />
-                    </ListItem>)}
-            </List>
-        </Box>
-    )
+                <List>
+                    {prop.content.body.paragraphs.map((content) =>
+                        <ListItem>
+                            <ListItemText primary={content} />
+                        </ListItem>)}
+
+                </List>
+            </Box>
+        )
+    }
+    throw "Information given to List section has invalid structure."
 }
