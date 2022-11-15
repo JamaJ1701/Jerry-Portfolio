@@ -21,5 +21,5 @@ export default function ListSection(prop: { content: projectSection }) {
             </Box>
         )
     }
-    throw "Information given to List section has invalid structure."
+    throw new TypeError("Information given to List section has invalid structure.");
 }

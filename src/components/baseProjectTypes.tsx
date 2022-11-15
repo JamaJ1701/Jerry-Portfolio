@@ -54,6 +54,6 @@ export function isVideo(obj: any): obj is bodyVideo{
 // returns non-zero if it is not a valid type
 export function assertProjectSection(section: projectSection) {
     if(!sections.includes(section.type as SectionType)){
-        throw "Invalied section type"
+        throw new TypeError("Given section type is not a valid section type")
     }
 }

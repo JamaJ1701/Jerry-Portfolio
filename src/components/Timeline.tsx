@@ -12,7 +12,7 @@ export default function Timeline(prop: { content: projectSection }) {
     assertProjectSection(prop.content);
     if(isTimeline(prop.content.body)){
         if (!prop.content.title || prop.content.body.dates.length != prop.content.body.paragraphs.length) {
-            throw "The length of timeline contents and headings are different"
+            throw new TypeError("The length of timeline contents and headings are different")
         }
         return (
             <Box>
@@ -35,7 +35,7 @@ export default function Timeline(prop: { content: projectSection }) {
             </Box>
         )
     }
-    throw "Invalid timeline";
+    throw new TypeError("Given section is not a timeline type");
     
     
 }

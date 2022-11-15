@@ -17,5 +17,5 @@ export default function ParagraphSection(prop: { content: projectSection, fontSi
             </Box>
         )
     }
-    throw "Invalid paragraph format"
+    throw new TypeError("Invalid paragraph format");
 }
