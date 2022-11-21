@@ -3,7 +3,6 @@ import { Container } from "@mui/system";
 import { useState } from "react";
 import { ProjectSummaryBlock } from "./components/ProjectSummaryBlock";
 
-// TODO: Simplify the keyword grid
 export default function Landing() {
     const theme = useTheme();
     // Type for profession. Used for interactivity of the main page
@@ -77,9 +76,9 @@ export default function Landing() {
                     Featured Project
                 </Typography>
                 <ProjectSummaryBlock
-                    title="Project title"
-                    tags={["C", "Python"]}
-                    summary="The portfolio project is something that I consider one of the best projects in my life. It was about generating a reasonable portfolio to be presented to others in same field of work or my peresonal connections, demonstrating my capabilities as a designer and developer. Material UI library was used for this project, which is a library for React websites."
+                    title="Portfolio website"
+                    tags={["React", "Typescript", "Material UI"]}
+                    summary="The goal of portfolio project is to document and present my previous works in the form of a website, while also learning and applying additional skills that I want to develop. For this purpose, the website was built using React and Typescript, using Material UI (MUI) library for graphical elements."
                     thumbnail={require("./res/logo512-tp.png")}
                     link="/"
                 />
