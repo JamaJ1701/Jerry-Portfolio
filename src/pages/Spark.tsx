@@ -10,6 +10,7 @@ export default function Spark(prop: { content: projectPageContent }) {
     const theme = useTheme();
     
     return (
+        
         <Container maxWidth="md">
             <Stack m={{ xs: 2, md: 5 }} spacing={2}>
                 {/* Title */}
@@ -25,6 +26,7 @@ export default function Spark(prop: { content: projectPageContent }) {
 
                 {/* Banner image */}
                 <img src={require("../res/spark/sparkBanner.png")} />
+
                 <Typography variant="h3" pt={2}>
                     Enhancing social interactions
                 </Typography>
