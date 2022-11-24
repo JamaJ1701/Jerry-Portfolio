@@ -12,7 +12,7 @@ export interface projectPageContent {
 // private interfaces and types
 
 // Different types of project content, used in the json files.
-const sections = ['overview', 'paragraph', 'list', 'image', 'timeline', 'videoTwoCol'] as const;
+const sections = ['overview', 'paragraph', 'list', 'image', 'timeline','video', 'videoTwoCol'] as const;
 type SectionType = typeof sections[number];
 
 /**
@@ -21,7 +21,7 @@ type SectionType = typeof sections[number];
 export type projectSection = {
     title: string;
     type: string;
-    body: bodyTimeline | bodyParagraph | bodyVideo;
+    body: bodyTimeline | bodyParagraph | bodyVideo | bodyImg;
 }
 
 export interface bodyParagraph {
@@ -49,6 +49,15 @@ export function isVideo(obj: any): obj is bodyVideo{
     return 'paragraphs' in obj && 'link' in obj
 }
 
+
+export interface bodyImg{
+    link:string;
+    caption?:string;
+}
+
+export function isImg(obj: any): obj is bodyImg{
+    return 'link' in obj;
+}
 
 // Check if the given project section type is valid
 // returns non-zero if it is not a valid type

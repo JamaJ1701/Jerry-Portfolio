@@ -33,3 +33,9 @@ a{
   align-items: center;
   text-align: center;
 }
+
+/* iframe styling */
+.content_video{
+  width: 100%;
+  min-height: 400px;
+}

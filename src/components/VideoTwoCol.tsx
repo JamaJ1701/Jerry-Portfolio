@@ -9,7 +9,11 @@ export default function VideoTwoCol(prop: { content: projectSection }) {
         return (
             <Box >
                 <Grid container sx={{ minHeight: 360 }}>
-                    <Grid item xs={6}>
+                    <Grid item md={12} xl={6}>
+                        <iframe className="content_video" src={prop.content.body.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </Grid>
+
+                    <Grid item md={12} xl={6}>
                         <Typography variant="h3">
                             {prop.content.title}
                         </Typography>
@@ -17,9 +21,6 @@ export default function VideoTwoCol(prop: { content: projectSection }) {
                         {prop.content.body.paragraphs.map((text) =>
                             <Typography variant="body1" m={2}>{text}</Typography>
                         )}
-                    </Grid>
-                    <Grid item xs={6}>
-                        <iframe width="100%" height="100%" src={prop.content.body.link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </Grid>
                 </Grid>
             </Box>
