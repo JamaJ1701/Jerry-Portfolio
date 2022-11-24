@@ -16,7 +16,6 @@ export default function ListSection(prop: { content: projectSection }) {
                         <ListItem>
                             <ListItemText primary={content} />
                         </ListItem>)}
-
                 </List>
             </Box>
         )

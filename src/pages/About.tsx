@@ -1,6 +1,6 @@
 import { Typography, Stack, Box, Container } from "@mui/material"
 import ProjectTags from "../components/ProjectTags"
-import AutomatedSection from "../components/AutomatedSection"
+import AutomatedSection from "../components/automated/AutomatedSection"
 import about from "./content/about.json"
 import projectContents from './content/projectContents'
 // About page

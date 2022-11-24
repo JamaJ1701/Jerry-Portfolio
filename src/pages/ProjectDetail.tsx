@@ -1,7 +1,7 @@
 import { Typography, Stack, Box, Container, useTheme } from "@mui/material"
 import ProjectTags from "../components/ProjectTags"
-import AutomatedSection from "../components/AutomatedSection"
-import { projectPageContent } from "../components/baseProjectTypes"
+import AutomatedSection from "../components/automated/AutomatedSection"
+import { projectPageContent } from "../components/automated/baseProjectTypes"
 
 // About page
 
