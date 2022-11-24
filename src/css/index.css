@@ -21,6 +21,7 @@ a{
   text-decoration: none;
 }
 
+
   /* img{
     width: 100%;
   } */
@@ -34,8 +35,16 @@ a{
   text-align: center;
 }
 
-/* iframe styling */
-.content_video{
+.img-full{
   width: 100%;
-  min-height: 400px;
+}
+
+.img-half{
+  width: 50%;
+}
+
+@media screen and (max-width:767px) {
+  .img-half{
+    width: 90%;
+  }
 }

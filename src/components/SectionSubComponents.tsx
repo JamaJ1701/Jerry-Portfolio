@@ -3,16 +3,16 @@
  * or used individually
  */
 
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
-export function ImageWithCaption(prop: { image: string, caption: string }) {
+export function ImageWithCaption(prop: { image: string, caption: string, class:string }) {
     return (
-        <>
-            <img src={prop.image} />
-            <Typography textAlign='center'>
+        <Box textAlign='center'>
+            <img className={prop.class} src={prop.image}/>
+            <Typography m={0} sx={{color:"#6a6a6a"}}>
                 {prop.caption}
             </Typography>
-        </>
+        </Box>
 
     )
 }

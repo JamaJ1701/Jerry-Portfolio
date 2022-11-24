@@ -8,7 +8,7 @@ import { ImageWithCaption } from "../components/SectionSubComponents";
 
 export default function Spark(prop: { content: projectPageContent }) {
     const theme = useTheme();
-    
+    // var projectImages = require('../res/spark');
     return (
         
         <Container maxWidth="md">
@@ -35,11 +35,11 @@ export default function Spark(prop: { content: projectPageContent }) {
                 </Typography>
                 <iframe className="content_video" src={"https://www.youtube.com/embed/QewGZPsnylU"} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
-                <Typography sx={{ textAlign: "flex-start" }}>
+                <Typography>
                     Nowadays, some people struggle to socialise and interact with other people at social events. These people do not want to initiate a conversation with strangers due to their fear of having an awkward and thus unsuccessful conversation. Spark aimed to give users the confidence to initiate conversations by informing them how much they share interests and acting as a conversation prop.
                 </Typography>
 
-                <Typography sx={{ textAlign: "flex-start" }}>
+                <Typography>
                     Spark will ask users to enter their basic information and interests before entering the social networking venue. The information entered by the user will then be stored on the LED hat, and the user will also need to wear a necklace with a vibration function. When the user faces other people in a social activity place, the necklace will provide the user with vibration feedback. The stronger the vibration, the more similar interests between the two people. In addition, the hat on the user's head has LED lights, and the colour of each light represents a different kind of interest. However, the user does not know what kind of interest each colour represents. To discover the meaning of LEDs the user must have a conversation with others in the event, who would also be interested in discovering them. By allowing everyone to participate in a guessing game, Spark gives everyone a common conversation topic as well as motivating them to start conversations with others.
                 </Typography>
 
@@ -49,7 +49,7 @@ export default function Spark(prop: { content: projectPageContent }) {
                 <Typography>
                     To allow the experience of using the Spark system, the team developed a prototype. The prototype consists of the Spark device and the main application, which interact with each other via WIFI. The device consists of a hat with LED, a necklace with vibration motor and a fiducial marker on top of the hat with set orientation. The LEDs and vibration motor were controlled by a microcontroller that constantly communicates with the main system, updating its colour sequence and vibration pattern.
                 </Typography>
-                
+                <ImageWithCaption image={require("../res/spark/device-3.jpg")} caption="Prototype device" class="img-full" />
                 <Typography>
                     The OpenCV library and fiducial markers are used to determine the location and orientation of each user in the event venue, which were used to determine who each user is looking at. The main application allows users to enter their interests, detect who is facing who, and communicates with the device via web socket.
                 </Typography>
@@ -91,6 +91,7 @@ export default function Spark(prop: { content: projectPageContent }) {
                             <Typography variant="h6" sx={{ color: theme.palette.primary.main }}>UI</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
+                        <ImageWithCaption image={require("../res/spark/ui.jpg")} caption="Application UI" class="img-half" />
                             <Typography m={2}>
                                 UI of the application was made using TKinter GUI library for python. The UI contains number of dropdown menus to enter interests, and buttons used for form submission and system calibration. Dropdown menus were used for prototypes to simplify the interest matching, as having complex interest matching algorithm was not necessary to demonstrate the core user interaction. First field, ID, is the ID of the fiducial marker this person is allocated to and was entered by the team members during the demonstration.
                             </Typography>
@@ -108,6 +109,7 @@ export default function Spark(prop: { content: projectPageContent }) {
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
+                        <ImageWithCaption image={require("../res/spark/mapping.jpg")} caption="3D to 2D mapping" class="img-half" />
                             <Typography m={2}>
                                 Locator is a component that detects who each user is looking at. This was done using AruCo fiducial marker, webcam and OpenCV library for python. Once a frame is retrieved from the webcam's video stream, the OpenCV library detects the markers inside the frame. Then, transformation matrix from each marker's coordinate system to the camera frame is calculated for each marker. This transformation matrix is later used to map the coordinates of each marker into one coordinate system.
                             </Typography>
@@ -135,12 +137,15 @@ export default function Spark(prop: { content: projectPageContent }) {
                             <Typography m={2}>
                                 The communication between the device and application was done using python web server and web sockets. The wireless communication is used to update the interest LED colours and vibration strengths of the device upon request. The server is run on a separate thread to the main function to ensure it doesn’t get affected by the main process loop.
                             </Typography>
+                            
                             <Typography m={2}>
                                 Once the server thread starts, it waits for a connection through a web socket. The incoming communication request to the server is handled by starting another thread that processes the request, so the server remains available for other incoming requests. This was implemented this way to ensure multiple devices could be connected to the server.
                             </Typography>
                             <Typography m={2}>
                                 Initially, the design only communicated vibration strength, thus the server only sent vibration strength to the device. Later when the LEDs were added to the design, the server had to handle two types of update requests that occur in different frequencies. The LEDs only had to be updated when the user interests were changed, while vibration strength had to be updated every time the user is looking at another user (or empty space). Hence, the server was programmed to handle two different types of requests depending on the type of request and user ID included in the request.
                             </Typography>
+
+                        <ImageWithCaption image={require("../res/spark/communication.jpg")} caption="Hardware and server communication" class="img-half" />
                         </AccordionDetails>
                     </Accordion>
                     <Accordion>
@@ -155,12 +160,14 @@ export default function Spark(prop: { content: projectPageContent }) {
                             <Typography m={2}>
                                 The Spark device consists of a microcontroller, Neopixel LED strip and vibration motor. The Neopixel LED strip was used to indicate the interests of each user to others using colours, also allowing them to start conversations by trying to guess the meaning of colours.
                             </Typography>
+                            <ImageWithCaption image={require("../res/spark/device-2.jpg")} caption="Hat with LED" class="img-half" />
                             <Typography m={2}>
                                 ‘ESP-32 thing plus’ development board was used as the central processor of the device due to its wireless connectivity. To simplify the development, Arduino core was used for the microcontroller, as well as Arduino libraries for Wifi communication and Neopixel LED control. Each microcontroller had hard-coded participant ID, which was used to update its LED colours and vibration strength.
                             </Typography>
                             <Typography m={2}>
                                 Upon booting, the microcontroller connects to the application server using hard-coded WIFI then requests the LED colour corresponding to its device ID. Once the LED colours are received, the microcontroller will update the colours on LED strip to match the received data. Then, the device sends periodic request to update its vibration value every 250ms for responsiveness. Once non-zero vibration strength is received from the server, the device will control the vibration motor to start vibrating using PWM.
                             </Typography>
+                            <ImageWithCaption image={require("../res/spark/device.jpg")} caption="Device circuit" class="img-half" />
                         </AccordionDetails>
                     </Accordion>
                 </Box>
@@ -173,7 +180,9 @@ export default function Spark(prop: { content: projectPageContent }) {
                 <Typography>
                     The exhibit was successful, and we were able to present our idea to many other people. The guests also gave us some interesting feedback that could be helpful with further development of the project. Some suggested the project could be used in product expos to allow guests to easily filter the products they are interested in, allowing more efficient communication between guests and salespeople. Also, asking same set of questions to all users allowed them to have conversations about them regardless of their interests, demonstrating the questionnaire could be a successful conversation prop by itself.
                 </Typography>
-
+                <Typography variant="h3">
+                    Gallery
+                </Typography>
             </Stack>
         </Container>
     )
