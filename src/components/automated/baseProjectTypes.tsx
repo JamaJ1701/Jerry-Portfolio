@@ -7,6 +7,7 @@ export interface projectPageContent {
     pageTitle: string;
     projectTags: string[];
     sections: any[];
+    link?: string;
 }
 
 // private interfaces and types

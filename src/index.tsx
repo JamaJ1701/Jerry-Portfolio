@@ -10,9 +10,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './pages/ErrorPage';
 import Landing from './Landing';
 import ProjectCollection from './pages/ProjectCollection';
-import projectContents from './pages/content/projectContents'
+import projectContents from './pages/content/json/projectContents'
 import ProjectDetail from './pages/ProjectDetail';
-import Spark from './pages/Spark';
+
+// Static page content imports
+import Spark from './pages/content/static/Spark';
+import About from './pages/content/static/About';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -34,12 +37,16 @@ const router = createBrowserRouter([
       },
       {
         path:"projects/Spark",
-        element: <Spark content={projectContents["spark"]} />
+        element: <ProjectDetail content={projectContents["spark"]}>
+          <Spark />
+        </ProjectDetail>
       },
       {
         // about page is still rendered using the project Content template.
         path: "about",
-        element:<ProjectDetail content={projectContents["about"]} />
+        element:<ProjectDetail content={projectContents["about"]}>
+          <About />
+        </ProjectDetail>
       }
     ]
   }
