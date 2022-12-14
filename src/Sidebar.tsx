@@ -1,7 +1,7 @@
 import { Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Container } from "@mui/material"
+import { Container, Button } from "@mui/material"
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -42,8 +42,12 @@ export default function Sidebar() {
 
             {/* SNS icons */}
             <Container sx={{ textAlign: "center", mt: 4 }}>
-                <GitHubIcon sx={{ fontSize: 30, mr: 3 }} />
-                <LinkedInIcon sx={{ fontSize: 30 }} />
+                <a href="https://github.com/JamaJ1701">
+                    <GitHubIcon sx={{ fontSize: 30, mr: 3 }} />
+                </a>
+                <a href="https://www.linkedin.com/in/myoungseok-jeong-34264613b/">
+                    <LinkedInIcon sx={{ fontSize: 30 }} />
+                </a>
             </Container>
         </Box>
     );
