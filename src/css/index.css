@@ -21,10 +21,12 @@ a{
   text-decoration: none;
 }
 
+/* Application demo iframe */
+.app-demo{
+  min-height: 50vh;
+  width: 100%;
+}
 
-  /* img{
-    width: 100%;
-  } */
 .menu-title{
   
   font-size: 2rem;
