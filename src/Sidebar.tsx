@@ -24,7 +24,12 @@ export default function Sidebar() {
                 <SidebarEntry name="About" />
 
                 {/* Projects */}
-                <SidebarEntry name="Projects" />
+                {/* <SidebarEntry name="Projects" /> */}
+                <ListItem key={"Projects"} disablePadding>
+                    <ListItemButton >
+                        <Typography variant="h6">Projects</Typography>
+                    </ListItemButton>
+                </ListItem>
                 <List sx={{ pl: 2 }}>
                     {["Portfolio", "Spark", "ISBAR"].map((text) => (
                         <SidebarEntry key={text} name={text} category="projects" />
@@ -32,12 +37,12 @@ export default function Sidebar() {
                 </List>
 
                 {/* Application section. I don't have any application to show yet */}
-                <SidebarEntry name="Applications" />
+                {/* <SidebarEntry name="Applications" /> */}
             </List>
 
             {/* SNS icons */}
             <Container sx={{ textAlign: "center", mt: 4 }}>
-                <GitHubIcon sx={{ fontSize: 30, mr:3}} />
+                <GitHubIcon sx={{ fontSize: 30, mr: 3 }} />
                 <LinkedInIcon sx={{ fontSize: 30 }} />
             </Container>
         </Box>
@@ -48,7 +53,7 @@ export default function Sidebar() {
 interface entryprop {
     name: string;
     // The parent category of the item in menu. Assuming max 2 levels of hierachy
-    category?: string; 
+    category?: string;
 }
 
 // Function component for menu item
