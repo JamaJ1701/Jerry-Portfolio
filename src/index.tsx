@@ -17,6 +17,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Spark from './pages/content/static/Spark';
 import About from './pages/content/static/About';
 import Isbar from './pages/content/static/Isbar';
+import Portfolio from './pages/content/static/Portfolio';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -33,8 +34,21 @@ const router = createBrowserRouter([
         element: <Landing />
       },
       {
+        // about page is still rendered using the project Content template.
+        path: "about",
+        element:<ProjectDetail content={projectContents["about"]}>
+          <About />
+        </ProjectDetail>
+      },
+      {
         path: "projects",
         element: <ProjectCollection />,
+      },
+      {
+        path: "projects/Portfolio",
+        element:<ProjectDetail content={projectContents["portfolio"]}>
+          <Portfolio />
+        </ProjectDetail>
       },
       {
         path:"projects/Spark",
@@ -43,14 +57,6 @@ const router = createBrowserRouter([
         </ProjectDetail>
       },
       {
-        // about page is still rendered using the project Content template.
-        path: "about",
-        element:<ProjectDetail content={projectContents["about"]}>
-          <About />
-        </ProjectDetail>
-      },
-      {
-        // about page is still rendered using the project Content template.
         path: "projects/ISBAR",
         element:<ProjectDetail content={projectContents["isbar"]}>
           <Isbar />
