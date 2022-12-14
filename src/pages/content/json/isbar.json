@@ -1,0 +1,23 @@
+{
+    "pageTitle": "ISBAR patient form",
+    "projectTags": [
+        "React",
+        "Material UI",
+        "FHIR",
+        "UX"
+    ],
+    "link": "https://github.com/Solving-ISBARriers/COMP3820-ISBAR",
+    "sections": [
+        {
+            "title": "ISBAR handover form",
+            "type": "paragraph",
+            "body": {
+                "paragraphs": [
+                    "This was a project from a university course that engages with CSIRO and UQ School of Medicine. The goal of the project was to develop a patient ISBAR (Introduction, Situation, Background, Assessment, Recommendation) handover form for EHR (Electronic Health Record) system of UQ for student training purposes, using FHIR (Fast Healthcare Interoperability Resources).",
+                    "Students were free to use any technology for the web-application to be used in the EHR, and our group selected React with Material UI for the application. The application was developed using EHR testing environment and development FHIR server, which simulates the deployment environment of student EHR system used in UQ’s medical school. ",
+                    "For demonstration, the final result of the project is deployed using Github pages."
+                ]
+            }
+        }
+    ]
+}

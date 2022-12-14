@@ -26,7 +26,7 @@ export default function Sidebar() {
                 {/* Projects */}
                 <SidebarEntry name="Projects" />
                 <List sx={{ pl: 2 }}>
-                    {["Portfolio", "Spark", "Metallege"].map((text) => (
+                    {["Portfolio", "Spark", "ISBAR"].map((text) => (
                         <SidebarEntry key={text} name={text} category="projects" />
                     ))}
                 </List>

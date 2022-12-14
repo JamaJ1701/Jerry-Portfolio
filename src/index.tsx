@@ -16,6 +16,7 @@ import ProjectDetail from './pages/ProjectDetail';
 // Static page content imports
 import Spark from './pages/content/static/Spark';
 import About from './pages/content/static/About';
+import Isbar from './pages/content/static/Isbar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -46,6 +47,13 @@ const router = createBrowserRouter([
         path: "about",
         element:<ProjectDetail content={projectContents["about"]}>
           <About />
+        </ProjectDetail>
+      },
+      {
+        // about page is still rendered using the project Content template.
+        path: "projects/ISBAR",
+        element:<ProjectDetail content={projectContents["isbar"]}>
+          <Isbar />
         </ProjectDetail>
       }
     ]
