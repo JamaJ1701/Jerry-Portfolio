@@ -80,7 +80,7 @@ export default function Landing() {
                     tags={["React", "Typescript", "Material UI"]}
                     summary="The goal of portfolio project is to document and present my previous works in the form of a website, while also learning and applying additional skills that I want to develop. For this purpose, the website was built using React and Typescript, using Material UI (MUI) library for graphical elements."
                     thumbnail={require("./res/logo512-tp.png")}
-                    link="/"
+                    link="/projects/Portfolio"
                 />
             </Container>
         </Box>

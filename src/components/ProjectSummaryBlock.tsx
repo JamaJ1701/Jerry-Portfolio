@@ -12,7 +12,7 @@ import ProjectTags from "./ProjectTags"
 
             <Grid item xs={12} md={6} sx={{ p: { xs: 5, md: 2 }, pb: { xs: 0 } }}>
                 {/* Project image */}
-                <img src={prop.thumbnail} width="100%" />
+                <img src={prop.thumbnail} width="100%" alt="Featured project" />
             </Grid>
             <Grid item xs={12} md={6} sx={{ alignSelf: "center", p: { xs: 5, md: 2 } }}>
                 <Typography variant="h3">
@@ -22,7 +22,7 @@ import ProjectTags from "./ProjectTags"
                 <Typography variant="body1" sx={{ mt: 2 }}>
                     {prop.summary}
                 </Typography>
-                <Button onClick={() => console.log("pressed")} sx={{ p: 0, mt: 1 }}>
+                <Button href={prop.link} sx={{ p: 0, mt: 1 }}>
                     Learn more
                 </Button>
             </Grid>
