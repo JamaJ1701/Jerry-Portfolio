@@ -52,17 +52,17 @@ export default function Landing() {
                         <BannerHeadings heading="Development" label={"Dev" as profs} />
                         <BannerHeadings heading="Engineering" label={"Eng" as profs} />
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "UX" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active === "UX" ? "flex" : "none" }}>
                         {["Prototyping", "Testing", "User Research", "Graphic design", "Figma", "Adobe Suite"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "Dev" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active === "Dev" ? "flex" : "none" }}>
                         {["React", "Typescript", "HTML", "CSS", "Javascript", "Bootstrap"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}
                     </Grid>
-                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active == "Eng" ? "flex" : "none" }}>
+                    <Grid container columnSpacing={4} rowSpacing={3} sx={{ justifyContent: "center", p: 3, display: active === "Eng" ? "flex" : "none" }}>
                         {["Python", "C", "C++", "Java", "IoT", "CAD", "PCB design"].map((text) => (
                             <KeywordBubble key={text} content={text} />
                         ))}

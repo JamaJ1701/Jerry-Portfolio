@@ -9,7 +9,7 @@ export default function Spark() {
     return (
         <>
             {/* Banner image */}
-            <img src={require("../../../res/spark/sparkBanner.png")} />
+            <img src={require("../../../res/spark/sparkBanner.png")} alt="Spark banner" />
 
             <Typography variant="h3" pt={2}>
                 Enhancing social interactions
