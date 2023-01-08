@@ -45,6 +45,10 @@ a{
   width: 50%;
 }
 
+.content_video{
+  min-height: 400px;
+}
+
 @media screen and (max-width:767px) {
   .img-half{
     width: 90%;

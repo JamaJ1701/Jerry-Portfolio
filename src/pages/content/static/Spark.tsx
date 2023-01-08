@@ -164,9 +164,9 @@ export default function Spark() {
             <Typography>
                 The exhibit was successful, and we were able to present our idea to many other people. The guests also gave us some interesting feedback that could be helpful with further development of the project. Some suggested the project could be used in product expos to allow guests to easily filter the products they are interested in, allowing more efficient communication between guests and salespeople. Also, asking same set of questions to all users allowed them to have conversations about them regardless of their interests, demonstrating the questionnaire could be a successful conversation prop by itself.
             </Typography>
-            <Typography variant="h3">
+            {/* <Typography variant="h3">
                 Gallery
-            </Typography>
+            </Typography> */}
         </>
 
     )
